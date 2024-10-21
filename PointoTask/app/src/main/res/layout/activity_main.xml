@@ -1,0 +1,176 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:padding="16dp"
+    android:background="@color/darkGray">
+
+    <!-- Button Grid -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:padding="8dp"
+        android:layout_gravity="center">
+
+        <!-- Map Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/map"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Map"
+            android:textSize="18sp"
+            android:icon="@drawable/map"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cornerRadius="20dp"
+        app:iconPadding="8dp"
+        android:layout_margin="8dp"
+        android:padding="16dp"
+        android:backgroundTint="#32CD32" />
+
+        <!-- On/Off Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btOnOff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="On/Off"
+            android:textSize="18sp"
+            android:icon="@drawable/on"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cornerRadius="20dp"
+            app:iconPadding="8dp"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:backgroundTint="#32CD32" />
+
+        <!-- Discover Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDiscover"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Discover"
+            android:textSize="18sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cornerRadius="20dp"
+            app:iconPadding="8dp"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:backgroundTint="#32CD32" />
+
+        <!-- Get Paired Devices Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btGetPairedDevices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Get Paired Devices"
+            android:textSize="18sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cornerRadius="20dp"
+            app:iconPadding="8dp"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:backgroundTint="#32CD32" />
+
+    </GridLayout>
+
+    <!-- Get Scanned Devices Button (Full-width) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btDiscoverDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Scanned Devices"
+        android:textSize="18sp"
+        app:cornerRadius="20dp"
+        app:iconPadding="8dp"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:backgroundTint="#32CD32"/>
+
+    <!-- Paired Device List (TextView with Cards) -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/black"
+        >
+
+        <TextView
+            android:id="@+id/device1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paired Device 1"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:padding="16dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/black"
+        >
+
+        <TextView
+            android:id="@+id/device2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paired Device 1"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:padding="16dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/black"
+        >
+
+        <TextView
+            android:id="@+id/device3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paired Device 1"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:padding="16dp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Runtime Permission Message -->
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FF6347"
+        android:padding="8dp" />
+
+    <!-- Device List -->
+    <ListView
+        android:id="@+id/deviceList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:padding="10dp"
+        android:backgroundTint="#008080"/>
+
+</LinearLayout>
